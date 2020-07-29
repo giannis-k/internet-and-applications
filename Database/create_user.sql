@@ -1,5 +1,5 @@
-CREATE USER 'internetappli'@'localhost' IDENTIFIED BY 'user';
+CREATE USER 'read_user'@'localhost' IDENTIFIED BY 'read_user';
 
-GRANT SELECT ON internetappli.* TO 'user'@'localhost';
+GRANT SELECT ON internetappli.* TO 'read_user'@'localhost';
 
 FLUSH PRIVILEGES;
