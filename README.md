@@ -4,6 +4,7 @@
 
 ## Τεχνολογίες που θα χρησιμοποιηθούν
 * MySQL
-* Javascript (nodejs, reactjs)
+* Java (Spring)
+* Javascript (ReactJS)
 * HTML
 * CSS
