@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div.class_title{
+ margin-left: 1rem
+}
+
+body.query{
+	background-image: url("wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+body.main{
+  background-image: url("wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-size: cover;
+}
+
+form {
+  margin: 2rem;
+}
+
+h1 {
+  color: black;
+}
+
+div.main{
+	width: 60%;
+	margin-top: 5rem;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+#span3 {
+    height: 30rem !important;
+    overflow-y: auto;
+	background-color: white;
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+#span3 thead th {
+  position: sticky;
+  top: 0;
+}
+
+tr.black th {
+  background: black;
+  color: white;
+}
+
+/*#table {
+   margin-top: 2rem; 
+}
+*/
+#Mainpage {
+  margin-top: 2rem;
+}
+
+.chart {
+  margin-top: 2rem;
+  background-color: white;
+}
+
+.alert {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 40%;
+}
