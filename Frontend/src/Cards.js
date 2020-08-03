@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GoalsTable from './GoalsTable';
+import CardsTable from './CardsTable';
 
 const optionsPosition = [
 	{ id: 1, value: 'All', label: 'All' },
@@ -34,14 +34,14 @@ const optionsTeam = [
 ]
 
 
-class Goals extends Component {
+class Cards extends Component {
 
 		constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.state = {
-			Statistic: 'Goals',
+			Statistic: 'Cards',
 			Position: null,
 			Team: null,
 			Errors: null,
@@ -159,7 +159,7 @@ class Goals extends Component {
 				<br />
 				<div>
 					<div>
-						{this.state.isSubmitted && <GoalsTable results={this.state.Results}/>}
+						{this.state.isSubmitted && <CardsTable results={this.state.Results}/>}
 					</div>
 				</div>
 				</div>
@@ -168,4 +168,4 @@ class Goals extends Component {
 	}
 }
 
-export default Goals;
+export default Cards;

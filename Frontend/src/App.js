@@ -4,6 +4,8 @@ import './App.css';
 import Main from './Main';
 import League from './League';
 import Goals from './Goals';
+import Assists from './Assists';
+import Cards from './Cards';
 
 class App extends Component {
 
@@ -33,6 +35,8 @@ class App extends Component {
             <Route path="/" component={this.renderComponent(Main)}/>
             <Route path="/LeagueTable" component={League}/>
             <Route path="/Goals" component={Goals}/>
+            <Route path="/Assists" component={Assists}/>
+            <Route path="/Cards" component={Cards}/>
           </div>
         </Router>
       </div>
@@ -41,8 +45,3 @@ class App extends Component {
 }
 
 export default App;
-
-            // <Route path="/LeagueTable" component={LeagueTable}/>
-            // <Route path="/main/AggregatedGenerationPerType" component={AggregatedGenerationPerType}/>
-            // <Route path="/main/DayAheadTotalLoadForecast" component={DayAheadTotalLoadForecast}/>
-            // <Route path="/main/ActualvsForecast" component={ActualvsForecast}/>
