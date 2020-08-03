@@ -60,5 +60,17 @@ public class Conroller {
 			return new ResponseEntity<List<Players>>(p_service.findCards2(position), HttpStatus.OK);
 		return new ResponseEntity<List<Players>>(p_service.findCards3(position, team), HttpStatus.OK);
 	}
+	
+	@CrossOrigin(origins = "http://localhost:3000")
+	@GetMapping("/Appearances/{team}/{position}")
+	public ResponseEntity<List<Players>> listAppearances(@PathVariable String team, @PathVariable String position) {
+		if(team.equals("All") && position.equals("All"))
+			return new ResponseEntity<List<Players>>(p_service.findAppearances0(), HttpStatus.OK);
+		if(position.equals("All"))
+			return new ResponseEntity<List<Players>>(p_service.findAppearances1(team), HttpStatus.OK);
+		if(team.equals("All"))
+			return new ResponseEntity<List<Players>>(p_service.findAppearances2(position), HttpStatus.OK);
+		return new ResponseEntity<List<Players>>(p_service.findAppearances3(position, team), HttpStatus.OK);
+	}
 
 }

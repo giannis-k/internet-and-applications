@@ -58,4 +58,20 @@ public class PlayerService {
 	public List<Players> findCards3(String Position, String Team) {
 		return repo.findByPositionAndTeamOrderByCardsDesc(Position, Team);
 	}
+	
+	public List<Players> findAppearances0() {
+		return repo.findAllByOrderByAppearancesDesc();
+	}
+	
+	public List<Players> findAppearances1(String Team) {
+		return repo.findByTeamOrderByAppearancesDesc(Team);
+	}
+	
+	public List<Players> findAppearances2(String Position) {
+		return repo.findByPositionOrderByAppearancesDesc(Position);
+	}
+	
+	public List<Players> findAppearances3(String Position, String Team) {
+		return repo.findByPositionAndTeamOrderByAppearancesDesc(Position, Team);
+	}
 }

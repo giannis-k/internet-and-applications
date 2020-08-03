@@ -3,6 +3,7 @@ import Select from 'react-select';
 
 const options = [
   { value: 'LeagueTable', label: 'League Table' },
+  { value: 'Appearances', label: 'Appearances'},
   { value: 'Goals', label: 'Goals'},
   { value: 'Assists', label: 'Assists'},
   { value: 'Cards', label: 'Cards'},

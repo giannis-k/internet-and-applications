@@ -42,4 +42,16 @@ public interface PlayersRepository extends JpaRepository<Players, String>{
 	
 	@Query
 	List<Players> findByPositionOrderByCardsDesc(String Position);
+	
+	@Query
+	List<Players> findAllByOrderByAppearancesDesc();
+	
+	@Query
+	List<Players> findByPositionAndTeamOrderByAppearancesDesc(String Position, String Team);
+	
+	@Query
+	List<Players> findByTeamOrderByAppearancesDesc(String Team);
+	
+	@Query
+	List<Players> findByPositionOrderByAppearancesDesc(String Position);
 }
