@@ -47,9 +47,9 @@ div.main{
 }
 
 #span3 {
-    height: 30rem !important;
-    overflow-y: auto;
-	background-color: white;
+  height: 30rem !important;
+  overflow-y: auto;
+	background-color: #05f1ff;
 	margin-left: 25%;
 	margin-right: 25%;
 	width: 50%;
