@@ -44,7 +44,6 @@ class Goals extends Component {
 			Statistic: 'Goals',
 			Position: null,
 			Team: null,
-			SearchPeriod: null,
 			Errors: null,
 			Results: [],
 			isSubmitted: false,
