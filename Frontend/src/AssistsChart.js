@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
 let _ = require('underscore');
 
-class AppearancesChart extends Component {
+class AssistsChart extends Component {
 
   constructor(props) {
     super(props);
@@ -29,13 +29,13 @@ class AppearancesChart extends Component {
     this.Labels = Object.keys(this.ObjectLabels);
 
     for(let player of Object.keys(this.Labels)) {
-      this.yAxisData.push(this.ObjectLabels[this.Labels[player]][0].appearances);
+      this.yAxisData.push(this.ObjectLabels[this.Labels[player]][0].assists);
     }
-
+    
     this.ChartData = {
       labels: this.Labels,
       datasets: [{
-        label: 'Appearances',
+        label: 'Assists',
         data: this.yAxisData,
         backgroundColor: 'rgba(63,63,191,0.4)',
         borderColor: 'rgba(63,63,191,1)',
@@ -51,7 +51,7 @@ class AppearancesChart extends Component {
           options = {{
             title: {
               display: true,
-              text: "Appearances"
+              text: 'Assists'
             },
             legend : {
               display: false,
@@ -60,7 +60,7 @@ class AppearancesChart extends Component {
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Appearances',
+                  labelString: 'Assists',
                 },
                 ticks: {
                   min: 0,
@@ -81,4 +81,4 @@ class AppearancesChart extends Component {
 
 }
 
-export default AppearancesChart;
+export default AssistsChart;

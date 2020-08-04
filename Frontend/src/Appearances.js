@@ -37,7 +37,7 @@ const optionsTeam = [
 
 class Appearances extends Component {
 
-		constructor(props) {
+	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,7 +51,7 @@ class Appearances extends Component {
 		};
 	}
 
-		handleChange (event) {
+	handleChange (event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
@@ -94,10 +94,6 @@ class Appearances extends Component {
 		.catch((error) => {
 			console.error(error);
 		});
-	}
-
-	componentDidUpdate() {
-		document.body.className="query";
 	}
 
 	createSelect(selectedOption) {

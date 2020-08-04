@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
 let _ = require('underscore');
 
-class AppearancesChart extends Component {
+class CardsChart extends Component {
 
   constructor(props) {
     super(props);
@@ -12,7 +12,8 @@ class AppearancesChart extends Component {
   }
 
   render() {
-    this.yAxisData = [];
+    this.yAxisDataYellow = [];
+    this.yAxisDataRed = [];
 
     let results=[];
     let i=0;
@@ -29,16 +30,24 @@ class AppearancesChart extends Component {
     this.Labels = Object.keys(this.ObjectLabels);
 
     for(let player of Object.keys(this.Labels)) {
-      this.yAxisData.push(this.ObjectLabels[this.Labels[player]][0].appearances);
+      this.yAxisDataYellow.push(this.ObjectLabels[this.Labels[player]][0].yellowcards);
+      this.yAxisDataRed.push(this.ObjectLabels[this.Labels[player]][0].redcards);
     }
-
+    
     this.ChartData = {
       labels: this.Labels,
       datasets: [{
-        label: 'Appearances',
-        data: this.yAxisData,
-        backgroundColor: 'rgba(63,63,191,0.4)',
-        borderColor: 'rgba(63,63,191,1)',
+        label: 'Yellow Cards',
+        data: this.yAxisDataYellow,
+        backgroundColor: 'rgba(235, 232, 52, 0.5)',
+        borderColor: 'rgba(235, 232, 52, 1)',
+        borderWidth: 1
+      },
+      {
+        label: 'Red Cards',
+        data: this.yAxisDataRed,
+        backgroundColor: 'rgba(230, 0, 0, 0.4)',
+        borderColor: 'rgba(230, 0, 0, 1)',
         borderWidth: 1
       }]
     };
@@ -51,22 +60,21 @@ class AppearancesChart extends Component {
           options = {{
             title: {
               display: true,
-              text: "Appearances"
+              text: 'Cards'
             },
             legend : {
               display: false,
             },
             scales: {
               yAxes: [{
+                stacked: true,
                 scaleLabel: {
                   display: true,
-                  labelString: 'Appearances',
-                },
-                ticks: {
-                  min: 0,
-                },
+                  labelString: 'Cards',
+                }
               }],
               xAxes: [{
+                stacked: true,
                 scaleLabel: {
                   display: true,
                   labelString: 'Player Name',
@@ -81,4 +89,4 @@ class AppearancesChart extends Component {
 
 }
 
-export default AppearancesChart;
+export default CardsChart;
