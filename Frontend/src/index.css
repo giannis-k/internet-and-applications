@@ -32,11 +32,20 @@ body.main{
 }
 
 form {
-  margin: 2rem;
+  margin-left: 25%;
 }
 
 h1 {
   color: black;
+}
+
+.top10 {
+  color: black;
+  margin-left: 25%;
+}
+
+.select {
+  color: red;
 }
 
 div.main{
@@ -66,17 +75,16 @@ tr.black th {
   color: white;
 }
 
-/*#table {
-   margin-top: 2rem; 
-}
-*/
 #Mainpage {
   margin-top: 2rem;
 }
 
 .chart {
-  margin-top: 2rem;
-  background-color: white;
+  background-color: #ffe6ff;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  margin-bottom: 3rem;
 }
 
 .alert {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppearancesTable from './AppearancesTable';
+import AppearancesChart from './AppearancesChart';
 
 const optionsPosition = [
 	{ id: 1, value: 'All', label: 'All' },
@@ -131,12 +132,13 @@ class Appearances extends Component {
 				<div id="Team">
 					<div className="form-row">
 						<div className="form-group col-md-6">
-							<label htmlFor="validationDefault05">Team</label>
+							<div>
+								{!this.state.Team && <div className="select">Please select a team</div>}
+							</div>
 							<select required className="custom-select" name="Team" value={this.state.Team} onChange={this.handleChange}>
 								<option disabled selected value> -- Select Team -- </option>
 								{this.createSelect(optionsTeam)}
 							</select>
-							<div className="invalid-feedback">Please select a team</div>
 						</div>
 					</div>
 				</div>
@@ -144,12 +146,13 @@ class Appearances extends Component {
 				<div id="Position">
 					<div className="form-row">
 						<div className="form-group col-md-6">
-							<label htmlFor="validationDefault05">Position</label>
+							<div>
+								{!this.state.Position && <div className="select">Please select a position</div>}
+							</div>
 							<select required className="custom-select" name="Position" value={this.state.Position} onChange={this.handleChange}>
 								<option disabled selected value> -- Select Position -- </option>
 								{this.createSelect(optionsPosition)}
 							</select>
-							<div className="invalid-feedback">Please select a position</div>
 						</div>
 					</div>
 				</div>
@@ -160,6 +163,8 @@ class Appearances extends Component {
 				<div>
 					<div>
 						{this.state.isSubmitted && <AppearancesTable results={this.state.Results}/>}
+						{this.state.isSubmitted && <div><h2 className="top10">Top 10</h2></div>}
+						{this.state.isSubmitted && <AppearancesChart Results={this.state.Results}/>}
 					</div>
 				</div>
 				</div>
