@@ -18,7 +18,6 @@ class Main extends Component {
     this.setState(
       { selectedOption },
       () => {
-        console.log(`Option selected:`, this.state.selectedOption);
         this.props.history.push('/'+this.state.selectedOption.value);
       }
     );
@@ -46,7 +45,7 @@ class Main extends Component {
             value={selectedOption}
             onChange={this.handleChange}
             options={options}
-            placeholder={'Select Statistic...'}
+            placeholder={'Select Statistic'}
           />
         </div>
       </div>

@@ -63,18 +63,14 @@ class Cards extends Component {
 	};
 
 	handleSubmit(e) {
-		/* Prevents browser from reloading page */
 		e.preventDefault();
 
 		const Statistic = this.state.Statistic;
 		const Position = this.state.Position;
 		const Team = this.state.Team;
 
-		console.log('Submitting...', Statistic, Position, Team);
-
 		fetch('http://localhost:8080/'+Statistic+'/'+Team+'/'+Position)
 		.then((response) => {
-			console.log(response.status, response.statusText);
 			if (!response.ok) {
 				this.setState({
 					Errors: 'An error occured',
@@ -85,7 +81,6 @@ class Cards extends Component {
 			}
 		})
 		.then(json => {
-			//console.log(json);
 			this.setState({
 				Results: json,
 				isSubmitted: true,

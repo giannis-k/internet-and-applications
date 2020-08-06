@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
-let _ = require('underscore');
 
 class AssistsChart extends Component {
 
@@ -12,7 +11,8 @@ class AssistsChart extends Component {
   }
 
   render() {
-    this.yAxisData = [];
+    this.Assists = [];
+    this.Players = [];
 
     let results=[];
     let i=0;
@@ -25,18 +25,16 @@ class AssistsChart extends Component {
     for(let j=0; j<i; j++)
       results.push(this.props.Results[j])
 
-    this.ObjectLabels = _.groupBy(results, "name");
-    this.Labels = Object.keys(this.ObjectLabels);
-
-    for(let player of Object.keys(this.Labels)) {
-      this.yAxisData.push(this.ObjectLabels[this.Labels[player]][0].assists);
+    for(let j=0; j<i; j++) {
+      this.Players.push(results[j].name);
+      this.Assists.push(results[j].assists);
     }
     
     this.ChartData = {
-      labels: this.Labels,
+      labels: this.Players,
       datasets: [{
         label: 'Assists',
-        data: this.yAxisData,
+        data: this.Assists,
         backgroundColor: 'rgba(63,63,191,0.4)',
         borderColor: 'rgba(63,63,191,1)',
         borderWidth: 1

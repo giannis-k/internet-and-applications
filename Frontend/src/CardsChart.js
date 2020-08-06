@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
-let _ = require('underscore');
 
 class CardsChart extends Component {
 
@@ -12,8 +11,9 @@ class CardsChart extends Component {
   }
 
   render() {
-    this.yAxisDataYellow = [];
-    this.yAxisDataRed = [];
+    this.YellowCards = [];
+    this.RedCards = [];
+    this.Players = [];
 
     let results=[];
     let i=0;
@@ -26,26 +26,24 @@ class CardsChart extends Component {
     for(let j=0; j<i; j++)
       results.push(this.props.Results[j])
 
-    this.ObjectLabels = _.groupBy(results, "name");
-    this.Labels = Object.keys(this.ObjectLabels);
-
-    for(let player of Object.keys(this.Labels)) {
-      this.yAxisDataYellow.push(this.ObjectLabels[this.Labels[player]][0].yellowcards);
-      this.yAxisDataRed.push(this.ObjectLabels[this.Labels[player]][0].redcards);
+    for(let j=0; j<i; j++) {
+      this.Players.push(results[j].name);
+      this.YellowCards.push(results[j].yellowcards);
+      this.RedCards.push(results[j].redcards);
     }
     
     this.ChartData = {
-      labels: this.Labels,
+      labels: this.Players,
       datasets: [{
         label: 'Yellow Cards',
-        data: this.yAxisDataYellow,
+        data: this.YellowCards,
         backgroundColor: 'rgba(235, 232, 52, 0.5)',
         borderColor: 'rgba(235, 232, 52, 1)',
         borderWidth: 1
       },
       {
         label: 'Red Cards',
-        data: this.yAxisDataRed,
+        data: this.RedCards,
         backgroundColor: 'rgba(230, 0, 0, 0.4)',
         borderColor: 'rgba(230, 0, 0, 1)',
         borderWidth: 1

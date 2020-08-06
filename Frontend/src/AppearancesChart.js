@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
-let _ = require('underscore');
 
 class AppearancesChart extends Component {
 
@@ -12,7 +11,8 @@ class AppearancesChart extends Component {
   }
 
   render() {
-    this.yAxisData = [];
+    this.Appearances = [];
+    this.Players = [];
 
     let results=[];
     let i=0;
@@ -25,18 +25,16 @@ class AppearancesChart extends Component {
     for(let j=0; j<i; j++)
       results.push(this.props.Results[j])
 
-    this.ObjectLabels = _.groupBy(results, "name");
-    this.Labels = Object.keys(this.ObjectLabels);
-
-    for(let player of Object.keys(this.Labels)) {
-      this.yAxisData.push(this.ObjectLabels[this.Labels[player]][0].appearances);
+    for(let j=0; j<i; j++) {
+    	this.Players.push(results[j].name);
+    	this.Appearances.push(results[j].appearances);
     }
 
     this.ChartData = {
-      labels: this.Labels,
+      labels: this.Players,
       datasets: [{
         label: 'Appearances',
-        data: this.yAxisData,
+        data: this.Appearances,
         backgroundColor: 'rgba(63,63,191,0.4)',
         borderColor: 'rgba(63,63,191,1)',
         borderWidth: 1
@@ -51,7 +49,7 @@ class AppearancesChart extends Component {
           options = {{
             title: {
               display: true,
-              text: "Appearances"
+              text: 'Appearances'
             },
             legend : {
               display: false,
