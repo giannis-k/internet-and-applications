@@ -8,3 +8,9 @@
 * Javascript (ReactJS)
 * HTML
 * CSS
+
+## Οδηγίες εγκατάστασης
+
+Ακολουθείστε διαδοχικά τις οδηγίες που βρίσκονται στα README των φακέλων Database, Backend, Frontend.
+
+_Η λειτουργία του site έχει ελεγχθεί στους browsers Google Chrome, Mozilla Firefox, Microsoft Edge_
