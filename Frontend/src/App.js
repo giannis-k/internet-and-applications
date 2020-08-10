@@ -13,15 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      style: {
-        backgroundColor:'#fff',
-        height:'100vh'
-      },
     };
-  }
-
-  renderComponent(Component) {
-    return  (props) => <Component {...props} />;
   }
 
   render() {
@@ -33,7 +25,7 @@ class App extends Component {
               <h1>Premier League Statistics</h1>
             </div>
             <div className="class_title"><h1>Welcome EPL fan</h1></div>
-            <Route path="/" component={this.renderComponent(Main)}/>
+            <Route path="/" component={Main}/>
             <Route path="/LeagueTable" component={League}/>
             <Route path="/Appearances" component={Appearances}/>
             <Route path="/Goals" component={Goals}/>
