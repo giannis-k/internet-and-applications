@@ -12,27 +12,26 @@ code {
     monospace;
 }
 
+#Mainpage {
+  margin-top: 2rem;
+}
+
 div.class_title{
- margin-left: 1rem
+  margin-left: 1rem
 }
 
 body.main{
   background-image: url("wallpaper.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: cover;
+  background-size: cover;
 }
 
 form {
   margin-left: 20%;
 }
 
-h1 {
-  color: black;
-}
-
 .top10 {
-  color: black;
   margin-left: 25%;
 }
 
@@ -41,21 +40,21 @@ h1 {
 }
 
 div.main{
-	width: 60%;
-	margin-top: 5rem;
-	margin-left: auto;
+  width: 60%;
+  margin-top: 5rem;
+  margin-left: auto;
   margin-right: auto;
 }
 
 #span3 {
   height: 30rem !important;
   overflow-y: auto;
-	background-color: #05f1ff;
-	margin-left: 25%;
-	margin-right: 25%;
-	width: 50%;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
+  background-color: #05f1ff;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 #span3 thead th {
   position: sticky;
@@ -65,10 +64,6 @@ div.main{
 tr.black th {
   background: black;
   color: white;
-}
-
-#Mainpage {
-  margin-top: 2rem;
 }
 
 .chart {
