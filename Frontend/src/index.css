@@ -20,7 +20,7 @@ div.class_title{
   margin-left: 1rem
 }
 
-body.main{
+body {
   background-image: url("wallpaper.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;

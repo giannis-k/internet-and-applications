@@ -22,15 +22,6 @@ class Main extends Component {
       }
     );
   };
-  
-  componentDidMount(){
-		document.body.className="main";	
-  }
-  
-  componentDidUpdate(){
-		document.body.className="main";	
-  }
-  
 
   render() {
     const { selectedOption } = this.state;
